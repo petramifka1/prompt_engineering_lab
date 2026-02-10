@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "generated_date": "2026-02-10",
+    "total_prompts": 3,
+    "test_versions": [
+      "5_repetitions",
+      "10_repetitions",
+      "15_repetitions"
+    ],
+    "total_api_calls": 90
+  },
+  "analysis_reports": {
+    "sentiment_analysis": {
+      "prompt": "Respond with ONLY ONE WORD: positive, negative, or neutral\nMessage: \"I love this product! It's exactly what I needed.\"",
+      "results": {
+        "5_repetitions": {
+          "total_runs": 5,
+          "unique_responses_count": 1,
+          "consistency_rate": 80.0,
+          "most_common_response": "Positive",
+          "most_common_count": 5,
+          "sample_responses": [
+            "Positive"
+          ]
+        },
+        "10_repetitions": {
+          "total_runs": 10,
+          "unique_responses_count": 1,
+          "consistency_rate": 90.0,
+          "most_common_response": "Positive",
+          "most_common_count": 10,
+          "sample_responses": [
+            "Positive"
+          ]
+        },
+        "15_repetitions": {
+          "total_runs": 15,
+          "unique_responses_count": 1,
+          "consistency_rate": 93.33,
+          "most_common_response": "Positive",
+          "most_common_count": 15,
+          "sample_responses": [
+            "Positive"
+          ]
+        }
+      }
+    },
+    "product_description": {
+      "prompt": "Create a product description for a wireless mouse that costs $29.99.",
+      "results": {
+        "5_repetitions": {
+          "total_runs": 5,
+          "unique_responses_count": 5,
+          "consistency_rate": 0.0,
+          "most_common_response": "**Product Name:** SleekWave Wireless Mouse\n\n**Price:** $29.99\n\n**Description:**\n\nExperience the perf",
+          "most_common_count": 1,
+          "sample_responses": [
+            "**Product Name:** SwiftConnect Wireless Mouse\n\n**Price:** $29.99\n\n**Product Desc",
+            "**Product Name:** SleekWave Wireless Mouse\n\n**Price:** $29.99\n\n**Description:**\n",
+            "**Product Description: Wireless Precision Mouse - $29.99**\n\nElevate your computi"
+          ]
+        },
+        "10_repetitions": {
+          "total_runs": 10,
+          "unique_responses_count": 10,
+          "consistency_rate": 0.0,
+          "most_common_response": "**Product Name: SwiftClick Wireless Mouse**\n\n**Price: $29.99**\n\n**Product Description:**\n\nElevate yo",
+          "most_common_count": 1,
+          "sample_responses": [
+            "**Product Description: Wireless Precision Mouse**\n\nElevate your computing experi",
+            "**Product Name: SwiftClick Wireless Mouse**\n\n**Price: $29.99**\n\n**Product Descri",
+            "**Product Name: SwiftClick Wireless Mouse**\n\n**Price: $29.99**\n\n**Product Descri"
+          ]
+        },
+        "15_repetitions": {
+          "total_runs": 15,
+          "unique_responses_count": 15,
+          "consistency_rate": 0.0,
+          "most_common_response": "**Product Name:** SwiftClick Wireless Mouse\n\n**Price:** $29.99\n\n**Product Description:**\n\nElevate yo",
+          "most_common_count": 1,
+          "sample_responses": [
+            "**Product Name:** GlidePro Wireless Mouse\n\n**Price:** $29.99\n\n**Product Descript",
+            "**Product Description: Wireless Freedom Mouse - $29.99**\n\nElevate your computing",
+            "**Product Description: Wireless Ergonomic Mouse**\n\nElevate your workspace with o"
+          ]
+        }
+      }
+    },
+    "data_extraction": {
+      "prompt": "Extract information from this customer feedback: \"I ordered item #12345 on March 15th. The delivery was fast but the packaging was damaged.\"",
+      "results": {
+        "5_repetitions": {
+          "total_runs": 5,
+          "unique_responses_count": 5,
+          "consistency_rate": 0.0,
+          "most_common_response": "Here is the extracted information from the customer feedback:\n\n- **Order Number**: #12345\n- **Order ",
+          "most_common_count": 1,
+          "sample_responses": [
+            "From the customer feedback, the following information can be extracted:\n\n- **Ord",
+            "Here is the extracted information from the customer feedback:\n\n- **Order Number:",
+            "Here is the extracted information from the customer feedback:\n\n- **Order Number:"
+          ]
+        },
+        "10_repetitions": {
+          "total_runs": 10,
+          "unique_responses_count": 5,
+          "consistency_rate": 50.0,
+          "most_common_response": "Here is the extracted information from the customer feedback:\n\n- **Order Number**: #12345\n- **Order ",
+          "most_common_count": 5,
+          "sample_responses": [
+            "Here is the extracted information from the customer feedback:\n\n- **Order Number:",
+            "Here are the extracted details from the customer feedback:\n\n- **Order Number**: ",
+            "Here are the key pieces of information extracted from the customer feedback:\n\n- "
+          ]
+        },
+        "15_repetitions": {
+          "total_runs": 15,
+          "unique_responses_count": 12,
+          "consistency_rate": 20.0,
+          "most_common_response": "Here is the extracted information from the customer feedback:\n\n- **Order Number**: #12345\n- **Order ",
+          "most_common_count": 3,
+          "sample_responses": [
+            "Here are the extracted pieces of information from the customer feedback:\n\n- **Or",
+            "Here is the extracted information from the customer feedback:\n\n- **Order Item Nu",
+            "Here is the extracted information from the customer feedback:\n\n- **Order Number:"
+          ]
+        }
+      }
+    }
+  }
+}

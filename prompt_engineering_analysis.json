@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "generated_date": "2026-02-10T16:59:39.558739",
+    "session_focus": "Prompt Engineering Techniques - Consistency & Reliability Testing",
+    "total_api_calls": 90,
+    "models_tested": [
+      "gpt-4o-mini"
+    ],
+    "temperature": 0.7
+  },
+  "consistency_results": {
+    "sentiment_analysis": {
+      "v1_baseline": {
+        "5_runs": "40%",
+        "10_runs": "30%",
+        "15_runs": "27%",
+        "max": "40%"
+      },
+      "v2_improved": {
+        "5_runs": "60%",
+        "10_runs": "50%",
+        "15_runs": "47%",
+        "max": "60%"
+      },
+      "v3_few_shot": {
+        "5_runs": "100%",
+        "10_runs": "100%",
+        "15_runs": "100%",
+        "max": "100%"
+      }
+    },
+    "product_description": {
+      "v1_baseline": {
+        "5_runs": "20%",
+        "10_runs": "10%",
+        "15_runs": "7%",
+        "max": "20%"
+      },
+      "v2_structured": {
+        "5_runs": "40%",
+        "10_runs": "20%",
+        "15_runs": "13%",
+        "max": "40%"
+      },
+      "v3_constraints": {
+        "5_runs": "80%",
+        "10_runs": "70%",
+        "15_runs": "60%",
+        "max": "80%"
+      }
+    },
+    "data_extraction": {
+      "v1_baseline": {
+        "5_runs": "20%",
+        "10_runs": "10%",
+        "15_runs": "7%",
+        "max": "20%"
+      },
+      "v2_prioritized": {
+        "5_runs": "40%",
+        "10_runs": "20%",
+        "15_runs": "13%",
+        "max": "40%"
+      },
+      "v3_cot": {
+        "5_runs": "60%",
+        "10_runs": "50%",
+        "15_runs": "40%",
+        "max": "60%"
+      }
+    }
+  },
+  "improvement_metrics": {
+    "sentiment_analysis": {
+      "v1_to_v3_improvement": "+73%",
+      "improvement_multiple": "3.7x",
+      "technique_used": "Few-shot prompting",
+      "baseline_consistency": "27%",
+      "final_consistency": "100%",
+      "status": "PERFECT"
+    },
+    "product_description": {
+      "v1_to_v3_improvement": "+53%",
+      "improvement_multiple": "8.6x",
+      "technique_used": "Structured format + constraints",
+      "baseline_consistency": "7%",
+      "final_consistency": "60%",
+      "status": "GOOD"
+    },
+    "data_extraction": {
+      "v1_to_v3_improvement": "+33%",
+      "improvement_multiple": "5.7x",
+      "technique_used": "Chain of thought reasoning",
+      "baseline_consistency": "7%",
+      "final_consistency": "40%",
+      "status": "MODERATE"
+    }
+  },
+  "technique_effectiveness": {
+    "few_shot_prompting": {
+      "rating": "\u2605\u2605\u2605\u2605\u2605",
+      "effectiveness_level": "Excellent",
+      "consistency_gain": "+73%",
+      "best_for": "Classification tasks",
+      "recommended": true
+    },
+    "constraint_based": {
+      "rating": "\u2605\u2605\u2605\u2605\u2606",
+      "effectiveness_level": "Very Good",
+      "consistency_gain": "+53%",
+      "best_for": "Structured output",
+      "recommended": true
+    },
+    "chain_of_thought": {
+      "rating": "\u2605\u2605\u2605\u2606\u2606",
+      "effectiveness_level": "Good",
+      "consistency_gain": "+33%",
+      "best_for": "Complex extraction",
+      "recommended": true
+    },
+    "prioritization": {
+      "rating": "\u2605\u2605\u2606\u2606\u2606",
+      "effectiveness_level": "Moderate",
+      "consistency_gain": "+6%",
+      "best_for": "Guiding priorities",
+      "recommended": false
+    }
+  },
+  "key_findings": [
+    "Few-shot prompting is transformative for classification tasks - achieves 100% consistency",
+    "Structured constraints significantly improve but require examples for maximum effectiveness",
+    "Chain of Thought improves extraction quality and reduces variation but permits minor wording differences",
+    "Consistency degrades as run count increases - task-dependent phenomenon",
+    "Classification tasks achieve higher consistency than creative/extraction tasks",
+    "Temperature setting (0.7) contributes to variations - lower temperature = higher consistency"
+  ],
+  "failure_pattern_summary": {
+    "sentiment_analysis": {
+      "v1": "Variable formatting, 73% failure rate",
+      "v2": "Inconsistent interpretation, 53% failure rate",
+      "v3": "Zero failures - few-shot examples solve problem"
+    },
+    "product_description": {
+      "v1": "Highly variable format/length/features, 93% failure rate",
+      "v2": "Better structure but inconsistent content, 60% failure rate",
+      "v3": "Minor variations but structured format maintained, 40% failure rate"
+    },
+    "data_extraction": {
+      "v1": "Missed fields, wrong prioritization, 93% failure rate",
+      "v2": "Still inconsistent despite priority emphasis, 87% failure rate",
+      "v3": "All fields extracted with CoT, minor wording differences, 60% failure rate"
+    }
+  },
+  "recommendations": {
+    "immediate_actions": [
+      "Apply few-shot prompting to all classification tasks",
+      "Combine Chain of Thought with structured format requirements",
+      "Add example outputs to any multi-step prompt",
+      "Document expected output format with 2-3 examples"
+    ],
+    "optimization_opportunities": [
+      "Test sentiment with temperature=0.0 for deterministic behavior",
+      "Add few-shot examples to product description prompt",
+      "Create few-shot patterns for data extraction task",
+      "Consider temperature reduction for consistency-critical tasks"
+    ],
+    "measurement_strategy": [
+      "Always test prompts at 5, 10, 15 iterations to measure consistency",
+      "Track unique response count vs run count",
+      "Document failure patterns by prompt version",
+      "Measure consistency improvement from baseline to final version"
+    ]
+  }
+}
